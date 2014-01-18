@@ -1,0 +1,17 @@
+%html
+  %head
+    %title Becamp
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+
+  %h1 Becamp 2014
+  = image_tag "http://barcamp.org/f/1177955325/becamp-cville.png"
+  = yield
+
+  .footer
+    - if user_signed_in?
+      Logged in as #{current_user.email}
+      = link_to "Logout", destroy_user_session_path, :method => "delete"
+    - else
+      = link_to "Login", new_user_session_path
