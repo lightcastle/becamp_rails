@@ -1,1 +1,254 @@
-@import "bootstrap"
+@import "bootstrap";
+@import "bourbon";
+
+@media (min-width: 1020px){
+  .constraint{
+    float: none;
+    margin: 0 auto;
+    width: 1020px;
+  }
+}
+
+$orange: #ff7b22;
+$light-orange: #f6b664;
+$blue: #014582;
+
+html, body {
+  height: 100%
+}
+
+#holder {
+  min-height: 100%;
+  position: relative;
+}
+
+#main {
+  // this should be the height of #footer
+  padding-bottom: 130px;
+}
+
+body {
+  font-size: 20px;
+  overflow-y: scroll;
+}
+
+a {
+  color: $blue;
+}
+
+#header {
+  .top {
+    background-color: $orange;
+  }
+  .bottom {
+    @include linear-gradient(to bottom, $blue, #fff);
+    height: 40px;
+  }
+}
+
+.navbar {
+  margin-bottom: 0px;
+  background-color: $orange;
+  border-color: $orange;
+
+  .navbar-toggle {
+    border-color: #000;
+    &:hover {
+      background-color: $light-orange;
+    }
+    .icon-bar {
+      background-color: #000;
+    }
+  }
+
+  .navbar-collapse {
+    border-color: #000;
+  }
+
+  .navbar-brand {
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+    &:hover {
+      color: #000;
+    }
+  }
+
+  .navbar-nav {
+    .active a {
+      background-color: $light-orange;
+      color: #192E83;
+      &:hover {
+        background-color: $light-orange;
+        color: #192E83;
+      }
+    }
+
+    li {
+      a {
+        padding: 15px 40px;
+        color: #000;
+        font-weight: bold;
+        font-size: 20px;
+        &:hover {
+          background-color: $light-orange;
+          color: #192E83;
+        }
+      }
+    }
+  }
+}
+
+img#logo {
+  height: 140px;
+}
+
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+img.center {
+  display: block;
+}
+
+div.date {
+  margin-bottom: 20px
+}
+
+div.actions {
+  width: 400px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.flash_notice, .flash_alert {
+  padding: 10px;
+  text-align: center;
+  font-weight: bolder;
+  border-style: solid;
+  @include border-top-radius(10px);
+  @include border-bottom-radius(10px);
+  @include border-left-radius(10px);
+  @include border-right-radius(10px);
+}
+.flash_notice {
+  border-color: $light-orange;
+}
+
+.flash_alert {
+  border-color: red;
+}
+
+.hidden {
+  display: none;
+}
+
+.main {
+  // min-height: 700px;
+}
+
+#footer {
+  font-size: 16px;
+  margin-top: 40px;
+  background-color: $light-orange;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  #top {
+    height: 60px;
+    @include linear-gradient(to top, $light-orange, #fff);
+  }
+  #bottom {
+    margin-top: 15px;
+    .section {
+      display: inline-block;
+      height: 50px;
+      padding: 0 20px;
+      float: left;
+    }
+    .left {
+      width: 360px;
+    }
+    .middle {
+      border-left: 1px solid $orange;
+      border-right: 1px solid $orange;
+      margin: 0 10px;
+      width: 320px;
+    }
+    .right {
+      width: 310px;
+      img {
+        padding-top: 5px;
+        width: 50px;
+
+      }
+    }
+  }
+}
+
+
+
+
+// ABOUT
+.history {
+  margin-top: 40px;
+}
+
+div.icon {
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin: 25px 10px 0 10px;
+  @include linear-gradient(to bottom, $blue, #fff);
+  @include border-top-radius(10px);
+  @include border-bottom-radius(10px);
+  @include border-left-radius(10px);
+  @include border-right-radius(10px);
+}
+
+div.text {
+  padding-bottom: 20px;
+}
+
+table.center {
+  text-align: left;
+  width: 600px;
+}
+
+table, td {
+  font-size: 16px;
+  border: 1px solid black;
+}
+
+td {
+  padding: 5px;
+  &.time {
+    width: 200px;
+  }
+}
+
+
+
+
+// EMAIL
+label.error {
+  display: block;
+  color: red;
+  font-size: 14px;
+}
+
+form input[type="submit"] {
+  display: block;
+  margin: 10px auto;
+}
+
+
+
+
+// LOGIN
+#login {
+  margin: 0 auto;
+  width: 300px;
+}

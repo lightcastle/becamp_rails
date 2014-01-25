@@ -13,9 +13,11 @@
 
 ActiveRecord::Schema.define(version: 20140112025207) do
 
-  create_table "attendees", force: true do |t|
+  create_table "emails", force: true do |t|
     t.string "email", null: false
   end
+
+  add_index "emails", ["email"], name: "index_emails_on_email", unique: true, using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

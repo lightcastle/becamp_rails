@@ -1,32 +1,19 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.0.2'
-gem 'mysql2'
-
-gem 'compass-rails'
-gem 'sass-rails', '~> 4.0.0'
-gem 'bootstrap-sass'
-gem 'uglifier', '>= 1.3.0'
-gem 'jquery-rails'
-
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
-
+gem 'bootstrap-sass', '~> 3.0.3.0'
+gem 'bourbon'
 gem 'devise'
-
-
-gem 'haml-rails'
 gem 'haml'
-
-gem 'turbolinks'
+gem 'haml-rails'
+gem 'jquery-rails'
+gem 'jquery-validation-rails'
+gem 'mysql2'
+gem 'rails', '4.0.2'
 gem 'rake'
+gem 'sass-rails', '~> 4.0.0'
+gem 'uglifier', '>= 1.3.0'
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.1.2'
-
-# gem 'unicorn'
-
-gem 'capistrano', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
+group :development do
+  gem 'capistrano-rails'
+  gem 'quiet_assets'
+end
