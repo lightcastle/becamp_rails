@@ -9,6 +9,7 @@ Becamp::Application.routes.draw do
   get 'sponsors', to: 'content#sponsors'
   get 'contact', to: 'content#contact'
 
+  get 'admin', to: 'admin#index'
   resources :email, :only => [:new, :create]
 
 end

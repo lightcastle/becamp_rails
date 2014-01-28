@@ -39,7 +39,6 @@
                 .nav.navbar-nav.navbar-right
                   %li{ class: active_link('/users/sign_in') }
                     - if user_signed_in?
-                      #{current_user.email},
                       = link_to 'Logout', destroy_user_session_path, method: 'delete'
                     - else
                       = link_to 'Login', new_user_session_path
@@ -56,8 +55,8 @@
 
       #footer
         #top
-        #bottom
-          .constraint
+        #bottom.clearfix
+          .constraint.clearfix
             .left.section
               Website by:
               = link_to 'LightCastle Technical Consulting', 'http://www.lightcastletech.com'

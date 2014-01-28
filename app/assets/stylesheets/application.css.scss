@@ -1,17 +1,22 @@
 @import "bootstrap";
 @import "bourbon";
 
-@media (min-width: 1020px){
+$orange: #ff7b22;
+$light-orange: #f6b664;
+$blue: #014582;
+
+#main {
+  // this should be the height of #footer
+  padding-bottom: 130px;
+}
+
+@media (min-width: 1020px) {
   .constraint{
     float: none;
     margin: 0 auto;
     width: 1020px;
   }
 }
-
-$orange: #ff7b22;
-$light-orange: #f6b664;
-$blue: #014582;
 
 html, body {
   height: 100%
@@ -20,11 +25,6 @@ html, body {
 #holder {
   min-height: 100%;
   position: relative;
-}
-
-#main {
-  // this should be the height of #footer
-  padding-bottom: 130px;
 }
 
 body {
@@ -54,6 +54,9 @@ a {
   .navbar-toggle {
     border-color: #000;
     &:hover {
+      background-color: $light-orange;
+    }
+    &:focus {
       background-color: $light-orange;
     }
     .icon-bar {
@@ -167,22 +170,48 @@ div.actions {
       height: 50px;
       padding: 0 20px;
       float: left;
-    }
-    .left {
-      width: 360px;
-    }
-    .middle {
-      border-left: 1px solid $orange;
-      border-right: 1px solid $orange;
-      margin: 0 10px;
-      width: 320px;
-    }
-    .right {
-      width: 310px;
-      img {
-        padding-top: 5px;
-        width: 50px;
+      &.left {
+        width: 380px;
+      }
+      &.middle {
+        border-left: 1px solid $orange;
+        border-right: 1px solid $orange;
+        margin: 0 10px;
+        width: 320px;
+      }
+      &.right {
+        width: 300px;
+        img {
+          padding-top: 5px;
+          width: 50px;
 
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1010px) {
+  #main {
+    padding-bottom: 275px;
+  }
+  #footer {
+    #bottom {
+      .section {
+        float: none;
+        display: block;
+        margin: 0 auto;
+        &.middle {
+          border-left: 0px;
+          border-right: 0px;
+          border-top: 1px solid $orange;
+          border-bottom: 1px solid $orange;
+          margin: 0 auto;
+          width: 380px;
+        }
+        &.right {
+          width: 380px;
+        }
       }
     }
   }

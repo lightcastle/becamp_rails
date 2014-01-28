@@ -140,6 +140,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass (~> 3.0.3.0)
   bourbon
+  capistrano
   capistrano-rails
   devise
   haml
