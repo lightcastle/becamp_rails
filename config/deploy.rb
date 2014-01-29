@@ -33,7 +33,7 @@ namespace :deploy do
   desc 'Restart application'
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
-      run "cd #{current_path} && bundle exec rake unicorn:restart RAILS_ENV=#{rails_env}"
+      execute :rake, 'unicorn:restart'
     end
   end
 
