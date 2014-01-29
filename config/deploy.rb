@@ -33,7 +33,11 @@ namespace :deploy do
   desc 'Restart application'
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
-      execute :rake, 'unicorn:restart'
+      within release_path do
+        with rails_env: fetch(:rails_env) do
+          execute :rake, 'unicorn:restart'
+        end
+      end
     end
   end
 
