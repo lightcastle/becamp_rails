@@ -24,7 +24,7 @@ if GC.respond_to?(:copy_on_write_friendly=)
 end
 
 before_exec do |_|
-  ENV["BUNDLE_GEMFILE"] = File.join(root, 'Gemfile')
+  ENV["BUNDLE_GEMFILE"] = File.join(app_root, 'current', 'Gemfile')
 end
 
 before_fork do |server, worker|
