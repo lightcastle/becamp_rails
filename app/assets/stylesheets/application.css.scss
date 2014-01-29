@@ -10,8 +10,13 @@ $blue: #014582;
   padding-bottom: 130px;
 }
 
+.constraint {
+  float: none;
+  margin: 0 50px;
+}
+
 @media (min-width: 1020px) {
-  .constraint{
+  .constraint {
     float: none;
     margin: 0 auto;
     width: 1020px;
