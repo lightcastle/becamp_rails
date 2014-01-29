@@ -13,6 +13,7 @@ gem 'rake'
 gem 'sass-rails', '~> 4.0.0'
 gem 'therubyracer'
 gem 'uglifier', '>= 1.3.0'
+gem 'unicorn'
 
 group :development do
   gem 'capistrano'
