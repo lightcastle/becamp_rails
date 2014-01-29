@@ -48,7 +48,7 @@ namespace :unicorn do
 
   def rails_root
     require "pathname"
-    Pathname.new(__FILE__) + "../../.."
+    Pathname.new('/app/becamp/current')
   end
 
 end
