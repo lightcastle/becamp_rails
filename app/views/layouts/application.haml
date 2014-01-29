@@ -36,7 +36,7 @@
                     = link_to 'Sponsors', sponsors_path
                   %li{ class: active_link('/contact') }
                     = link_to 'Contact', contact_path
-                .nav.navbar-nav.navbar-right
+                .nav.navbar-nav.navbar-right.hidden
                   %li{ class: active_link('/users/sign_in') }
                     - if user_signed_in?
                       = link_to 'Logout', destroy_user_session_path, method: 'delete'
