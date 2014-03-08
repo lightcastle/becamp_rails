@@ -1,0 +1,23 @@
+#/etc/init/becamp.conf
+description "BeCamp Unicorn Upstart"
+author "Kendal Miller"
+
+start on virtual-filesystems
+stop on runlevel [06]
+
+env PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+env RAILS_ENV=production
+
+setuid deployer
+setgid deployer
+
+chdir /app/becamp/current
+
+pre-start script
+  exec ./bin/unicorn_rails -D -c /app/becamp/current/config/unicorn.rb --env production
+end script
+
+post-stop script
+  exec kill `cat /app/becamp/shared/tmp/pids/unicorn.pid`
+end script
