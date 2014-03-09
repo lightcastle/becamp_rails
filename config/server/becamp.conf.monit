@@ -1,0 +1,6 @@
+check process becamp with pidfile /app/becamp/shared/tmp/pids/unicorn.pid
+  group becamp
+  start program = "/bin/bash -c 'RAILS_ENV=production /app/becamp/current/bin/unicorn -D -c /app/becamp/current/config/unicorn.rb --env production'"
+    as uid deployer and gid deployer
+  stop program "/bin/bash -c 'kill -QUIT `cat /app/becamp/shared/tmp/pids/unicorn.pid`'"
+  if 5 restarts within 5 cycles then timeout

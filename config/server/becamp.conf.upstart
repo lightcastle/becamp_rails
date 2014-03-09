@@ -1,4 +1,6 @@
-#/etc/init/becamp.conf
+# /etc/init/becamp.conf
+# Not terribly useful because unicorn forks too many times and
+# upstart doesn't keep track of the pid
 description "BeCamp Unicorn Upstart"
 author "Kendal Miller"
 
