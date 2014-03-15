@@ -27,22 +27,32 @@ Some basic setup instructions for Ubuntu
 =======
 
 sudo apt-get install mysql-client mysql-server libmysql-ruby libmysqlclient-dev
+
 sudo apt-get install curl
+
 \curl -L https://get.rvm.io | bash -s stable
+
 source ~/.rvm/scripts/rvm
+
 rvm requirements
+
 rvm install ruby
+
 rvm use ruby --default
+
 rvm rubygems current
 
 
 You'll need to copy config/database.yml.sample to config/database.yml
 
 rvm gemset create becamp
+
 rvm gemset use becamp
+
 bundle install
 
 rake db:setup
+
 rake db:migrate
 
 
