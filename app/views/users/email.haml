@@ -1,9 +1,9 @@
 .center
-  = form_tag '/email', id: 'emailForm' do
+  = form_tag mailing_list_path, id: 'email-form' do
     = field_set_tag do
       %h2 Get notified about the latest beCamp news!
       %br
 
       = label_tag :email, 'Email:'
-      = text_field_tag :email, '', required: ''
+      = text_field_tag :email, '', { required: '' }
       = submit_tag 'Submit', class: "btn btn-primary btn-lg"

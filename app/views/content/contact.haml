@@ -18,6 +18,7 @@
 %br
 %br
 .center
-  Stay up to date on beCamp news!
-.center.actions
-  = link_to 'Join Our Mailing List', new_email_path, class: 'btn btn-primary btn-lg'
+  - if !user_signed_in?
+    Stay up to date on beCamp news!
+    .center.actions
+      = link_to 'Join Our Mailing List', mailing_list_path, class: 'btn btn-primary btn-lg'

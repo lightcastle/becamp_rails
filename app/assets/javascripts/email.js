@@ -1,6 +1,5 @@
 $(document).ready(function() {
-  console.log('wooo');
-  $('#emailForm').validate({
+  $('#email-form').validate({
     rules: {
       email: {
         required: true,

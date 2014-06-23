@@ -1,0 +1,22 @@
+.center
+  = form_for current_user, url: register_path do |f|
+    %h2 Please complete your profile
+    %br
+
+    = field_set_tag do
+      = f.label :attending, 'Will you be attending the 2014 beCamp?'
+      = f.check_box :attending
+
+    = field_set_tag do
+      = f.label :heard_about_by, 'How did you hear about beCamp?'
+      = f.text_field :heard_about_by
+
+    = field_set_tag nil, { class: 'attending', style: 'display:none' } do
+      = f.label :first_time_attendee, 'Will this be your first time at beCamp?'
+      = f.check_box :first_time_attendee
+
+    = field_set_tag nil, { class: 'attending', style: 'display:none' }  do
+      = f.label :shirt_size, 'What is your shirt size?'
+      = f.select :shirt_size, options_for_select(User::SHIRT_SIZES)
+
+    = f.submit 'Submit', class: "btn btn-primary btn-lg"

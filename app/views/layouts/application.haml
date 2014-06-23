@@ -36,12 +36,12 @@
                     = link_to 'Sponsors', sponsors_path
                   %li{ class: active_link('/contact') }
                     = link_to 'Contact', contact_path
-                .nav.navbar-nav.navbar-right.hidden
-                  %li{ class: active_link('/users/sign_in') }
+                .nav.navbar-nav.navbar-right
+                  %li{ class: active_link('/signin') }
                     - if user_signed_in?
-                      = link_to 'Logout', destroy_user_session_path, method: 'delete'
+                      = link_to 'Sign out', signout_path
                     - else
-                      = link_to 'Login', new_user_session_path
+                      = link_to 'Register/Sign in', signin_path
         .bottom
 
       #main.constraint
@@ -64,7 +64,10 @@
               Contact:
               = mail_to 'tamara@lightcastletech.com', 'tamara@lightcastletech.com'
             .middle.section
-              Keep up with the latest beCamp news!
-              = link_to 'Join our mailing list!', new_email_path
+              - if user_signed_in?
+                Join us September 19th & 20th, 2014, at CitySpace!
+              - else
+                Keep up with the latest beCamp news!
+                = link_to 'Join our mailing list!', mailing_list_path
             .right.section
               = link_to((image_tag 'twitter.png'), 'https://twitter.com/becamp_info')
