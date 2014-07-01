@@ -47,6 +47,8 @@ GEM
     execjs (2.0.2)
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
+    font-awesome-sass (4.1.0)
+      sass (~> 3.2)
     haml (4.0.5)
       tilt
     haml-rails (0.5.3)
@@ -169,6 +171,7 @@ DEPENDENCIES
   bourbon
   capistrano
   capistrano-rails
+  font-awesome-sass
   haml
   haml-rails
   jquery-rails

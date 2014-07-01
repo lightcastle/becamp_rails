@@ -1,11 +1,5 @@
 class User < ActiveRecord::Base
 
-  validates :email, presence: true,
-                    uniqueness: true,
-                    format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i }
-
-  before_save :downcase_email
-
   SHIRT_SIZES = ['none',
                  'S',
                  'M',
@@ -13,6 +7,15 @@ class User < ActiveRecord::Base
                  'XL',
                  'XXL',
                  'XXXL']
+
+  validates :email, presence: true,
+                    uniqueness: true,
+                    format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i }
+
+  validates :shirt_size, inclusion: { in: SHIRT_SIZES },
+                         if: :attending?
+
+  before_save :downcase_email
 
   def self.find_or_create_by_auth_hash(auth_hash)
     user = where(email: auth_hash['info']['email']).first_or_initialize
@@ -29,10 +32,7 @@ class User < ActiveRecord::Base
   end
 
   def registered?
-    !heard_about_by.nil? &&
-      !first_time_attendee.nil? &&
-      !shirt_size.nil? &&
-      !attending.nil?
+    !attending.nil?
   end
 
   private

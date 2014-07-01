@@ -10,8 +10,21 @@ class UsersController < ApplicationController
   end
 
   def register
-    if request.post?
+    @unregistered = !current_user.registered?
+    if request.put?
+      current_user.update_attributes(user_params)
 
+      redirect_to root_path, notice: "Thanks for registering!" if @unregistered && current_user.registered?
     end
+  end
+
+  private
+
+  def user_params
+    params.require(:user).
+      permit(:attending,
+             :heard_about_by,
+             :first_time_attendee,
+             :shirt_size)
   end
 end

@@ -37,6 +37,10 @@
                   %li{ class: active_link('/contact') }
                     = link_to 'Contact', contact_path
                 .nav.navbar-nav.navbar-right
+                  - if user_signed_in?
+                    %li{ class: active_link('/register') }
+                      = link_to register_path do
+                        %i{ class: 'fa fa-cog' }
                   %li{ class: active_link('/signin') }
                     - if user_signed_in?
                       = link_to 'Sign out', signout_path

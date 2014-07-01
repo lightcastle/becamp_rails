@@ -16,7 +16,7 @@ Becamp::Application.routes.draw do
   get '/auth/:provider/callback', to: 'sessions#create'
 
   get '/register', to: 'users#register'
-  post '/register', to: 'users#register'
+  put '/register', to: 'users#register'
   get '/mailing_list', to: 'users#email'
   post '/mailing_list', to: 'users#email'
 end
