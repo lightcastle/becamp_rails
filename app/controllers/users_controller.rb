@@ -10,6 +10,8 @@ class UsersController < ApplicationController
   end
 
   def register
+    redirect_to root_path and return if !user_signed_in?
+
     @unregistered = !current_user.registered?
     if request.put?
       current_user.update_attributes(user_params)
