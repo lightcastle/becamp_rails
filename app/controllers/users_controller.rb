@@ -18,7 +18,8 @@ class UsersController < ApplicationController
     if request.put?
       current_user.update_attributes(user_params)
 
-      redirect_to root_path, notice: "Thanks for registering!" if @unregistered && current_user.registered?
+      redirect_to root_path, notice: "Thanks for registering!" and return if @unregistered && current_user.registered?
+      flash.now[:notice] = 'Registration Updated'
     end
   end
 
