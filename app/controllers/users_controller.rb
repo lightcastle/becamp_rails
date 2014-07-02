@@ -2,6 +2,8 @@ class UsersController < ApplicationController
   skip_before_filter :gather_registration_details, only: [:register]
 
   def email
+    redirect_to root_path and return if user_signed_in?
+
     if request.post?
       user = User.create(email: params[:email])
 

@@ -7,3 +7,5 @@ google_client_secret: ''
 # https://github.com/settings/applications
 github_client_id: ''
 github_client_secret: ''
+
+contact_email: 'somewhere@gmail.com'

@@ -1,3 +1,17 @@
-%h2 Mailing list
-- User.all.each do |user|
-  %h2 #{user.email}
+%table
+  %tbody
+    %tr
+      %th Name
+      %th Email
+      %th Attending
+      %th First Time
+      %th How Heard
+      %th Shirt Size
+    - User.order(:email).each do |user|
+      %tr
+        %td= user.name
+        %td= user.email
+        %td= user.attending?
+        %td= user.first_time_attendee?
+        %td= user.heard_about_by
+        %td= user.shirt_size

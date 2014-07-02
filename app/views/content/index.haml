@@ -1,5 +1,8 @@
 .center.date
   Join us September 19th & 20th, 2014, at CitySpace on the Downtown Mall in Charlottesville, VA
+  %br
+  .count
+    #{User.attending.count} #{User.attending.count == 1 ? 'person' : 'people'} will be attending!
 
 .center.actions
   - if !user_signed_in?

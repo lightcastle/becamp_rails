@@ -17,6 +17,10 @@ class User < ActiveRecord::Base
 
   before_save :downcase_email
 
+  scope :attending, lambda {
+    where.not(attending: nil)
+  }
+
   def self.find_or_create_by_auth_hash(auth_hash)
     user = where(email: auth_hash['info']['email']).first_or_initialize
 

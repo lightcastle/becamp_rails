@@ -125,6 +125,10 @@ div.date {
   margin-bottom: 20px
 }
 
+div.count {
+  color: $orange;
+}
+
 div.actions {
   width: 400px;
   margin-bottom: 50px;
@@ -280,7 +284,11 @@ form input[type="submit"] {
 }
 
 
-
+.sponsors {
+  img {
+    margin: 15px;
+  }
+}
 
 // LOGIN
 #login {
