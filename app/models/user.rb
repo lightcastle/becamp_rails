@@ -18,7 +18,7 @@ class User < ActiveRecord::Base
   before_save :downcase_email
 
   scope :attending, lambda {
-    where.not(attending: nil)
+    where.(attending: true)
   }
 
   def self.find_or_create_by_auth_hash(auth_hash)
