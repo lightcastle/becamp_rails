@@ -291,8 +291,19 @@ form input[type="submit"] {
   }
 }
 
-// LOGIN
-#login {
+.faq {
+  width: 800px;
   margin: 0 auto;
-  width: 300px;
+  .questions {
+    margin-bottom: 40px;
+  }
+  .question {
+    font-weight: bold;
+  }
+  .answers {
+    .answer {
+      padding: 0 10px 30px;
+    }
+  }
 }
+

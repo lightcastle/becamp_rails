@@ -4,7 +4,8 @@ Becamp::Application.routes.draw do
 
   root 'content#index'
 
-  get '/about', to: 'content#about'
+  get '/faq', to: 'content#faq'
+  # get '/about', to: 'content#about'
   get '/schedule', to: 'content#schedule'
   get '/sponsors', to: 'content#sponsors'
   get '/contact', to: 'content#contact'

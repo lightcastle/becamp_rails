@@ -1,0 +1,110 @@
+.faq
+  .questions
+    .question
+      =link_to 'What is beCamp?', '#what'
+
+    .question
+      =link_to 'Who attends beCamp?', '#who'
+
+    .question
+      =link_to 'When is beCamp?', '#when'
+
+    .question
+      =link_to 'Where is beCamp held?', '#where'
+
+    .question
+      =link_to 'How much does beCamp cost?', '#cost'
+
+    .question
+      =link_to 'What about food?', '#food'
+
+    .question
+      =link_to 'Why is the schedule TBD?', '#tbd'
+
+    .question
+      =link_to 'How are topics decided?', '#topic'
+
+    .question
+      =link_to 'How did beCamp get started?', '#history'
+
+
+  .answers
+    .question
+      %a{ name: 'what' }
+      What is beCamp?
+    .answer
+      beCamp is Charlottesville's version of the
+      =link_to 'BarCamp', 'http://en.wikipedia.org/wiki/Bar_camp', target: 'blank'
+      unconference phenomenon. A conference organized on the fly
+      by attendees, for attendees.
+
+    .question
+      %a{ name: 'who' }
+      Who attends beCamp?
+    .answer
+      You! Software developers, system administrators,
+      quality assurance, devops, designers, business developers
+      and anyone interested in technology.
+
+    .question
+      %a{ name: 'when'}
+      When is beCamp?
+    .answer
+      beCamp begins Friday, September 19th, 2014 at 5:00PM for topic organization.
+      beCamp continues Saturday, September 20th, 2014 at 9:00AM for presentations.
+
+    .question
+      %a{ name: 'where' }
+      Where is beCamp held?
+    .answer
+      beCamp is held at
+      =link_to 'CitySpace', 'http://charlottesvillearts.org/cityspace/', target: 'blank'
+      on the Downtown Mall in Charlottesville, VA.
+      %br
+      =link_to 'Google Maps', 'https://www.google.com/maps/place/100+5th+St+NE,+Charlottesville,+VA+22902', target: 'blank'
+
+    .question
+      %a{ name: 'cost' }
+      How much does beCamp cost?
+    .answer
+      beCamp is free for attendees thanks to our awesome
+      =link_to 'sponsors.', sponsors_path
+
+    .question
+      %a{ name: 'food' }
+      What about food?
+    .answer
+      On Friday night, there will be pizza.
+      On Saturday, breakfast and lunch will be provided.
+      There will be beverages, including beer.
+
+    .question
+      %a{ name: 'tbd' }
+      Why is the schedule TBD?
+    .answer
+      The schedule will be made Friday night by attendees.
+
+    .question
+      %a{ name: 'topic' }
+      How are topics decided?
+    .answer
+      On Friday evening, anyone in attendance has the opportunity
+      to suggest topics for sessions for the following day. The
+      suggester also indicates whether it is a topic they can
+      present on, share information on, or want to learn. After
+      all the suggestions have been written down, they are placed on
+      a wall and all attendees can mark the suggestions they are interested
+      in. The suggestions that have the most votes are chosen as part of the
+      conference schedule the following day. Any topics that are not
+      chosen can still be presented in the middle of the day as a five
+      minute "Lightning Talk" segment where presenters can share their
+      message with the other conference attendees.
+
+    .question
+      %a{ name: 'history' }
+      How did beCamp get started?
+    .answer
+      The first beCamp was held in June 2007 when organizer
+      Steve Stedman came up with the idea of a "summer camp for geeks."
+      %br
+      =link_to 'UVA Today Article', 'http://news.virginia.edu/content/uva-host-bleeding-edge-web-technology-unconference-june-15-16-charlottesvilles-first-ever', target: 'blank'
