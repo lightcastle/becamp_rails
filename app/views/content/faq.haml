@@ -1,31 +1,37 @@
 .faq
   .questions
     .question
-      =link_to 'What is beCamp?', '#what'
+      = link_to 'What is beCamp?', '#what'
 
     .question
-      =link_to 'Who attends beCamp?', '#who'
+      = link_to 'Who attends beCamp?', '#who'
 
     .question
-      =link_to 'When is beCamp?', '#when'
+      = link_to 'When is beCamp?', '#when'
 
     .question
-      =link_to 'Where is beCamp held?', '#where'
+      = link_to 'Where is beCamp held?', '#where'
 
     .question
-      =link_to 'How much does beCamp cost?', '#cost'
+      = link_to 'How much does beCamp cost?', '#cost'
 
     .question
-      =link_to 'What about food?', '#food'
+      = link_to 'What about food?', '#food'
 
     .question
-      =link_to 'Why is the schedule TBD?', '#tbd'
+      = link_to 'Why is the schedule TBD?', '#tbd'
 
     .question
-      =link_to 'How are topics decided?', '#topic'
+      = link_to 'How are topics decided?', '#topic'
 
     .question
-      =link_to 'How did beCamp get started?', '#history'
+      = link_to 'What about topics that are not chosen?', '#lightning'
+
+    .question
+      = link_to 'How did beCamp get started?', '#history'
+
+    .question
+      = link_to 'How can I help out with beCamp?', '#help'
 
 
   .answers
@@ -34,8 +40,8 @@
       What is beCamp?
     .answer
       beCamp is Charlottesville's version of the
-      =link_to 'BarCamp', 'http://en.wikipedia.org/wiki/Bar_camp', target: 'blank'
-      unconference phenomenon. A conference organized on the fly
+      = link_to 'BarCamp', 'http://en.wikipedia.org/wiki/Bar_camp', target: 'blank'
+      unconference movement - a conference organized on the fly
       by attendees, for attendees.
 
     .question
@@ -58,7 +64,7 @@
       Where is beCamp held?
     .answer
       beCamp is held at
-      =link_to 'CitySpace', 'http://charlottesvillearts.org/cityspace/', target: 'blank'
+      = link_to 'CitySpace', 'http://charlottesvillearts.org/cityspace/', target: 'blank'
       on the Downtown Mall in Charlottesville, VA.
       %br
       =link_to 'Google Maps', 'https://www.google.com/maps/place/100+5th+St+NE,+Charlottesville,+VA+22902', target: 'blank'
@@ -68,15 +74,16 @@
       How much does beCamp cost?
     .answer
       beCamp is free for attendees thanks to our awesome
-      =link_to 'sponsors.', sponsors_path
+      = link_to 'sponsors.', sponsors_path
 
     .question
       %a{ name: 'food' }
       What about food?
     .answer
-      On Friday night, there will be pizza.
-      On Saturday, breakfast and lunch will be provided.
-      There will be beverages, including beer.
+      Food and beverages will be provided for the duration of the event.
+      However, If you'd like to grab something else, beCamp is held on
+      Charlottesville's Historic Downtown Mall, giving you plenty of
+      alternatives to choose from.
 
     .question
       %a{ name: 'tbd' }
@@ -88,23 +95,39 @@
       %a{ name: 'topic' }
       How are topics decided?
     .answer
-      On Friday evening, anyone in attendance has the opportunity
-      to suggest topics for sessions for the following day. The
-      suggester also indicates whether it is a topic they can
-      present on, share information on, or want to learn. After
+      On Friday evening, anyone in attendance can suggest
+      topics for sessions held the following day. The
+      suggester indicates whether it is a topic they'd like to
+      present on, hold a group discussion on, or learn more about. After
       all the suggestions have been written down, they are placed on
-      a wall and all attendees can mark the suggestions they are interested
+      a wall and attendees mark the topics they are interested
       in. The suggestions that have the most votes are chosen as part of the
-      conference schedule the following day. Any topics that are not
-      chosen can still be presented in the middle of the day as a five
-      minute "Lightning Talk" segment where presenters can share their
-      message with the other conference attendees.
+      conference schedule for the following day.
+
+    .question
+      %a{ name: 'lightning' }
+      What about topics that are not chosen?
+    .answer
+      Topics that are not chosen for the main scheduling blocks
+      can still be presented as a five minute "Lightning Talk"
+      where presenters can share their message with the other
+      conference attendees. This Lightning Talk portion is held
+      Saturday around lunch time, and may include talks that were
+      not pitched on Friday night.
 
     .question
       %a{ name: 'history' }
       How did beCamp get started?
     .answer
       The first beCamp was held in June 2007 when organizer
-      Steve Stedman came up with the idea of a "summer camp for geeks."
+      Steve Stedman decided to hold a "summer camp for geeks."
       %br
-      =link_to 'UVA Today Article', 'http://news.virginia.edu/content/uva-host-bleeding-edge-web-technology-unconference-june-15-16-charlottesvilles-first-ever', target: 'blank'
+      = link_to 'UVA Today Article', 'http://news.virginia.edu/content/uva-host-bleeding-edge-web-technology-unconference-june-15-16-charlottesvilles-first-ever', target: 'blank'
+
+    .question
+      %a{ name: 'help' }
+      How can I help out with beCamp?
+    .answer
+      If you would like to help out, please
+      = mail_to App.contact_email, 'Contact Us.'
+
