@@ -7,7 +7,9 @@
       %th First Time
       %th How Heard
       %th Shirt Size
-    - User.order(:email).each do |user|
+      %th Created At
+      %th Updated At
+    - User.order(:updateD_at).each do |user|
       %tr
         %td= user.name
         %td= user.email
@@ -15,3 +17,5 @@
         %td= user.first_time_attendee?
         %td= user.heard_about_by
         %td= user.shirt_size
+        %td= user.created_at
+        %td= user.updated_at
