@@ -18,7 +18,7 @@
 
     = field_set_tag nil, { class: 'attending', style: 'display:none' } do
       = f.label :first_time_attendee, 'Will this be your first time at beCamp?'
-      = f.check_box :first_time_attendee
+      = f.select :first_time_attendee, options_for_select([['Please choose one...', ''], ['Yes', true], ['No', false]], current_user.first_time_attendee)
 
     = field_set_tag nil, { class: 'attending', style: 'display:none' }  do
       = f.label :shirt_size, 'What is your shirt size?'
