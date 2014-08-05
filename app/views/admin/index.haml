@@ -1,38 +1,9 @@
-%table
-  %tbody
-    %tr
-      %th Name
-      %th Email
-      %th Attending
-      %th First Time
-      %th How Heard
-      %th Shirt Size
-      %th Created At
-      %th Updated At
-    %tr
-      %td{ colspan: 8 }
-        %b Mailing List Users
-    - User.where(provider: nil).order(:updated_at).each do |user|
-      %tr
-        %td
-        %td= user.email
-        %td
-        %td
-        %td
-        %td
-        %td= user.created_at
-        %td= user.updated_at
-    %tr
-      %td{ colspan: 8 }
-        %b Registered Users
-    - User.where.not(provider: nil).order(:updated_at).each do |user|
-      %tr
-        %td= user.name
-        %td= user.email
-        %td= user.attending?
-        %td= user.first_time_attendee?
-        %td= user.heard_about_by
-        %td= user.shirt_size
-        %td= user.created_at
-        %td= user.updated_at
-
+= link_to 'All Users', admin_all_path
+%br
+= link_to 'Mailing List', admin_mailing_path
+%br
+= link_to 'Attending - Null', admin_registered_null_path
+%br
+= link_to 'Attending - True', admin_registered_true_path
+%br
+= link_to 'Attending - False', admin_registered_false_path

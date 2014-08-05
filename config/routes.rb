@@ -11,6 +11,11 @@ Becamp::Application.routes.draw do
   get '/contact', to: 'content#contact'
 
   get '/admin', to: 'admin#index'
+  get '/admin/mailing', to: 'admin#mailing'
+  get '/admin/registered/null', to: 'admin#registered_nil'
+  get '/admin/registered/true', to: 'admin#registered_true'
+  get '/admin/registered/false', to: 'admin#registered_false'
+  get '/admin/all', to: 'admin#all'
 
   get '/signin', to: 'sessions#new', as: :signin
   get '/signout', to: 'sessions#destroy', as: :signout

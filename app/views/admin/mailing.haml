@@ -1,0 +1,12 @@
+%h2 Mailing List Users
+%table
+  %tbody
+    %tr
+      %th Email
+      %th Created At
+      %th Updated At
+    - User.where(provider: nil).order(:updated_at).each do |user|
+      %tr
+        %td= user.email
+        %td= user.created_at
+        %td= user.updated_at
