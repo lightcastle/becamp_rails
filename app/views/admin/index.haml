@@ -9,7 +9,23 @@
       %th Shirt Size
       %th Created At
       %th Updated At
-    - User.order(:updateD_at).each do |user|
+    %tr
+      %td{ colspan: 8 }
+        %b Mailing List Users
+    - User.where(provider: nil).order(:updated_at).each do |user|
+      %tr
+        %td
+        %td= user.email
+        %td
+        %td
+        %td
+        %td
+        %td= user.created_at
+        %td= user.updated_at
+    %tr
+      %td{ colspan: 8 }
+        %b Registered Users
+    - User.where.not(provider: nil).order(:updated_at).each do |user|
       %tr
         %td= user.name
         %td= user.email
@@ -19,3 +35,4 @@
         %td= user.shirt_size
         %td= user.created_at
         %td= user.updated_at
+

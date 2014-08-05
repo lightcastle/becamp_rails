@@ -10,7 +10,7 @@
 
     = field_set_tag do
       = f.label :attending, 'Will you be attending the 2014 beCamp?'
-      = f.check_box :attending
+      = f.select :attending, options_for_select([['Please choose one...', ''], ['Yes', true], ['No', false]], current_user.attending)
 
     = field_set_tag do
       = f.label :heard_about_by, 'How did you hear about beCamp?'
