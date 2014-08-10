@@ -14,6 +14,7 @@ Becamp::Application.routes.draw do
   get '/admin/mailing', to: 'admin#mailing'
   get '/admin/registered/null', to: 'admin#registered_nil'
   get '/admin/registered/true', to: 'admin#registered_true'
+  get '/admin/registered/true/first', to: 'admin#registered_true_first_time'
   get '/admin/registered/false', to: 'admin#registered_false'
   get '/admin/all', to: 'admin#all'
 

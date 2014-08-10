@@ -1,0 +1,20 @@
+%h2 Attending True First Time
+%table
+  %tbody
+    %tr
+      %th Name
+      %th Email
+      %th Attending
+      %th How Heard
+      %th Shirt Size
+      %th Created At
+      %th Updated At
+    - User.where.not(provider: nil).where(attending: true).where(first_time_attendee: true).order(:updated_at).each do |user|
+      %tr
+        %td= user.name
+        %td= user.email
+        %td= user.attending?
+        %td= user.heard_about_by
+        %td= user.shirt_size
+        %td= user.created_at
+        %td= user.updated_at
