@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
   validates :shirt_size, inclusion: { in: SHIRT_SIZES },
                          if: :attending?
 
-  before_save :downcase_email
+  before_save :downcase_email, :set_registered_at
 
   scope :attending, lambda {
     where(attending: true)
@@ -43,6 +43,14 @@ class User < ActiveRecord::Base
 
   def downcase_email
     self.email = email.downcase
+  end
+
+  def set_registered_at
+    if attending_changed? && attending
+      self.registered_at = Time.now
+    else
+      self.registered_at = nil
+    end
   end
 
 end
