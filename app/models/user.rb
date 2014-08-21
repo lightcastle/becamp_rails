@@ -48,7 +48,7 @@ class User < ActiveRecord::Base
   def set_registered_at
     if attending_changed? && attending
       self.registered_at = Time.now
-    else
+    elsif attending_changed? && !attending
       self.registered_at = nil
     end
   end
