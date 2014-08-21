@@ -10,6 +10,7 @@
       %th Shirt Size
       %th Created At
       %th Updated At
+      %th Registered At
     - User.order(:updated_at).each do |user|
       %tr
         %td= user.name
@@ -20,3 +21,4 @@
         %td= user.shirt_size
         %td= user.created_at
         %td= user.updated_at
+        %td= user.registered_at
