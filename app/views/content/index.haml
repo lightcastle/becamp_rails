@@ -1,13 +1,15 @@
 .center.date
-  Join us September 19th & 20th, 2014, at CitySpace on the Downtown Mall in Charlottesville, VA
+  beCamp will be in September. Check back or
+  = link_to 'join our mailing list', mailing_list_path
+  for more information.
   %br
   .count
-    #{User.attending.count} #{User.attending.count == 1 ? 'person' : 'people'} will be attending!
+    -#{User.attending.count} #{User.attending.count == 1 ? 'person' : 'people'} will be attending!
 
 .center.actions
   - if !user_signed_in?
     = link_to 'Join Our Mailing List', mailing_list_path, class: 'btn btn-primary btn-lg'
-    = link_to 'Register', signin_path, class: 'btn btn-primary btn-lg'
+    =# link_to 'Register', signin_path, class: 'btn btn-primary btn-lg'
 
 .center.overview
   %div See what beCamp is all about!

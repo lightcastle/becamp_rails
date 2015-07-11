@@ -10,6 +10,16 @@ Becamp::Application.routes.draw do
   get '/sponsors', to: 'content#sponsors'
   get '/contact', to: 'content#contact'
 
+  get '/past_schedules', to: 'content#past'
+  get '/schedule_2014', to: 'content#schedule_2014'
+  get '/schedule_2013', to: 'content#schedule_2013'
+  get '/schedule_2012', to: 'content#schedule_2012'
+  get '/schedule_2011', to: 'content#schedule_2011'
+  get '/schedule_2010', to: 'content#schedule_2010'
+  get '/schedule_2009', to: 'content#schedule_2009'
+  get '/schedule_2008', to: 'content#schedule_2008'
+  get '/schedule_2007', to: 'content#schedule_2007'
+
   get '/admin', to: 'admin#index'
   get '/admin/mailing', to: 'admin#mailing'
   get '/admin/registered/null', to: 'admin#registered_nil'
