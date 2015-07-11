@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'bootstrap-sass', '~> 3.0.3.0'
+gem 'bootstrap-sass'
 gem 'bourbon'
 gem 'font-awesome-sass'
 gem 'haml'
@@ -11,11 +11,11 @@ gem 'mysql2'
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'omniauth-google-oauth2'
-gem 'rails', '4.1.6rc1'
+gem 'rails'
 gem 'rake'
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails'
 gem 'therubyracer'
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier'
 gem 'unicorn'
 
 group :development do
