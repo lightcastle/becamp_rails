@@ -12,7 +12,6 @@ class UsersController < ApplicationController
   end
 
   def register
-    redirect_to root_path and return # disabled for now
     redirect_to root_path and return if !user_signed_in?
 
     @unregistered = !current_user.registered?
