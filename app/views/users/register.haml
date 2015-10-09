@@ -21,7 +21,7 @@
       = f.select :first_time_attendee, options_for_select([['Please choose one...', ''], ['Yes', true], ['No', false]], current_user.first_time_attendee)
 
     = field_set_tag nil, { class: 'attending', style: 'display:none' }  do
-      = f.label :shirt_size, 'What is your shirt size?'
+      = f.label :shirt_size, 'What is your shirt size? (10/08 - shirt order already placed. a few extras are available)'
       = f.select :shirt_size, options_for_select(User::SHIRT_SIZES, current_user.shirt_size)
 
     = f.submit 'Submit', class: "btn btn-primary btn-lg"
