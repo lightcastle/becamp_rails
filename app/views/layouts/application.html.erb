@@ -69,7 +69,7 @@
       <div class="constraint" id="main">
         <% flash.each do |name, msg| %>
           <% if msg.is_a?(String) %>
-            <div class="flash_<%= name %>">#{msg}</div>
+            <div class="flash_<%= name %>"><%= msg %></div>
           <% end %>
         <% end %>
         <%= image_tag 'becamp-large.png', class: 'center', id: 'logo' %>
