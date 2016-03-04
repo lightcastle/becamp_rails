@@ -1,0 +1,47 @@
+<h2>All</h2>
+<table>
+  <tbody>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Attending</th>
+      <th>First Time</th>
+      <th>How Heard</th>
+      <th>Shirt Size</th>
+      <th>Created At</th>
+      <th>Updated At</th>
+      <th>Registered At</th>
+    </tr>
+    <% User.order(:updated_at).each do |user| %>
+      <tr>
+        <td>
+          <%= user.name %>
+        </td>
+        <td>
+          <%= user.email %>
+        </td>
+        <td>
+          <%= user.attending? %>
+        </td>
+        <td>
+          <%= user.first_time_attendee? %>
+        </td>
+        <td>
+          <%= user.heard_about_by %>
+        </td>
+        <td>
+          <%= user.shirt_size %>
+        </td>
+        <td>
+          <%= user.created_at %>
+        </td>
+        <td>
+          <%= user.updated_at %>
+        </td>
+        <td>
+          <%= user.registered_at %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

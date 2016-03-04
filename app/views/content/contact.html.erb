@@ -1,0 +1,27 @@
+<div class="center">
+  Interesting in helping out with beCamp?
+</div>
+<br/>
+<div class="center">
+  Questions?
+</div>
+<br/>
+<div class="center">
+  Want to become a sponsor?
+</div>
+<br/>
+<div class="center contact">
+  Contact:
+  <%= mail_to App.contact_email %>
+</div>
+<br/>
+<br/>
+<br/>
+<div class="center">
+  <% if !user_signed_in? %>
+    Stay up to date on beCamp news!
+    <div class="center actions">
+      <%= link_to 'Join Our Mailing List', mailing_list_path, class: 'btn btn-primary btn-lg' %>
+    </div>
+  <% end %>
+</div>

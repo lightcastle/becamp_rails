@@ -1,0 +1,23 @@
+<h2>Mailing List Users</h2>
+<table>
+  <tbody>
+    <tr>
+      <th>Email</th>
+      <th>Created At</th>
+      <th>Updated At</th>
+    </tr>
+    <% User.where(provider: nil).order(:updated_at).each do |user| %>
+      <tr>
+        <td>
+          <%= user.email %>
+        </td>
+        <td>
+          <%= user.created_at %>
+        </td>
+        <td>
+          <%= user.updated_at %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

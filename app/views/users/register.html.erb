@@ -1,0 +1,27 @@
+<div class="center">
+  <% if @unregistered %>
+    <h2>Please let us know if you will be attending</h2>
+  <% else %>
+    <h2>Change your attendance</h2>
+  <% end %>
+  <br/>
+  <%= form_for current_user, url: register_path, method: :put do |f| %>
+    <%= field_set_tag do %>
+      <%= f.label :attending, 'Will you be attending the 2015 beCamp?' %>
+      <%= f.select :attending, options_for_select([['Please choose one...', ''], ['Yes', true], ['No', false]], current_user.attending) %>
+    <% end %>
+    <%= field_set_tag do %>
+      <%= f.label :heard_about_by, 'How did you hear about beCamp?' %>
+      <%= f.text_field :heard_about_by %>
+    <% end %>
+    <%= field_set_tag nil, { class: 'attending', style: 'display:none' } do %>
+      <%= f.label :first_time_attendee, 'Will this be your first time at beCamp?' %>
+      <%= f.select :first_time_attendee, options_for_select([['Please choose one...', ''], ['Yes', true], ['No', false]], current_user.first_time_attendee) %>
+    <% end %>
+    <%= field_set_tag nil, { class: 'attending', style: 'display:none' }  do %>
+      <%= f.label :shirt_size, 'What is your shirt size? (10/08 - shirt order already placed. a few extras are available)' %>
+      <%= f.select :shirt_size, options_for_select(User::SHIRT_SIZES, current_user.shirt_size) %>
+    <% end %>
+    <%= f.submit 'Submit', class: "btn btn-primary btn-lg" %>
+  <% end %>
+</div>

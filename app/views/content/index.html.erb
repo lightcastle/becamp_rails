@@ -1,0 +1,21 @@
+<div class="center date">
+  Join us October 23rd & 24th, 2015.
+  <br/>
+  beCamp takes place in Charlottesville, VA.
+  <br/>
+  Friday night will be at Portico and Saturday will be at Studio IX.
+  <br/>
+  <div class="count">
+    <%= "#{User.attending.count} #{User.attending.count == 1 ? 'person' : 'people'} will be attending!" %>
+  </div>
+</div>
+<div class="center actions">
+  <% if !user_signed_in? %>
+    <%= link_to 'Join Our Mailing List', mailing_list_path, class: 'btn btn-primary btn-lg' %>
+    <%= link_to 'Register', signin_path, class: 'btn btn-primary btn-lg' %>
+  <% end %>
+</div>
+<div class="center overview">
+  <div>See what beCamp is all about!</div>
+  <iframe frameborder="0" height="380" src="//www.youtube.com/embed/fSMCf8RSDA4?feature=oembed" width="600"></iframe>
+</div>
