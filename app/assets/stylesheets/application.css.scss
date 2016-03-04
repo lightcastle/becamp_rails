@@ -97,7 +97,7 @@ a {
 
     li {
       a {
-        padding: 15px 30px;
+        padding: 15px 20px;
         color: #000;
         font-weight: bold;
         font-size: 20px;
@@ -305,6 +305,15 @@ form input[type="submit"] {
     .answer {
       padding: 0 10px 30px;
     }
+  }
+}
+
+.attendees {
+  width: 400px;
+  margin: 0 auto;
+  table, td {
+    border: none;
+    padding: 0;
   }
 }
 

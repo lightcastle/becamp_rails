@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   skip_before_filter :gather_registration_details, only: [:register]
 
+  def attendees
+    @users = User.where(attending: true, list_me: true).order(:updated_at)
+  end
+
   def email
     redirect_to root_path and return if user_signed_in?
 
@@ -30,6 +34,7 @@ class UsersController < ApplicationController
       permit(:attending,
              :heard_about_by,
              :first_time_attendee,
+             :list_me,
              :shirt_size)
   end
 end

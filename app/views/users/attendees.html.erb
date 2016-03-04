@@ -1,0 +1,23 @@
+<div class="attendees">
+  <table>
+    <thead>
+      <tr>
+        <th>Name:</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% if @users.empty? %>
+        <tr>
+          <td>No one has signed up</td>
+        </tr>
+      <% end %>
+
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= user.name %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

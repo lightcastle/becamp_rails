@@ -32,6 +32,7 @@ Becamp::Application.routes.draw do
   get '/auth/:provider/callback', to: 'sessions#create'
   get '/auth/failure', to: redirect('/')
 
+  get '/attendees', to: 'users#attendees'
   get '/register', to: 'users#register'
   put '/register', to: 'users#register'
   get '/mailing_list', to: 'users#email'

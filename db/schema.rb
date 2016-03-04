@@ -11,24 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140821022143) do
+ActiveRecord::Schema.define(version: 20151024210730) do
 
-  create_table "users", force: true do |t|
-    t.string   "email",               default: "",    null: false
-    t.integer  "sign_in_count",       default: 0,     null: false
+  create_table "users", force: :cascade do |t|
+    t.string   "email",               limit: 255, default: "",    null: false
+    t.integer  "sign_in_count",       limit: 4,   default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "provider"
-    t.string   "uid"
-    t.string   "name"
-    t.boolean  "admin",               default: false, null: false
+    t.string   "provider",            limit: 255
+    t.string   "uid",                 limit: 255
+    t.string   "name",                limit: 255
+    t.boolean  "admin",                           default: false, null: false
     t.boolean  "attending"
-    t.string   "heard_about_by"
+    t.string   "heard_about_by",      limit: 255
     t.boolean  "first_time_attendee"
-    t.string   "shirt_size"
+    t.string   "shirt_size",          limit: 255
     t.datetime "registered_at"
+    t.boolean  "list_me"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
