@@ -1,9 +1,18 @@
-<div class="center date">
-  Join us October 23rd & 24th, 2015.
-  <br/>
-  beCamp takes place in Charlottesville, VA.
-  <br/>
-  Friday night will be at Portico and Saturday will be at Studio IX.
+<div class="center date" itemscope itemtype="http://schema.org/Event">
+  <meta itemprop="startDate" content="2016-09-16">
+  <meta itemprop="endDate" content="2016-09-17">
+  <meta itemprop="url" content="http://becamp.org">
+  <meta itemprop="description" content="Open Space Conference">
+  <meta itemprop="image" content="<%= image_url 'becamp-large.png' %>">
+  Join us for <span itemprop="name">beCamp</span>
+  <br >
+  September 16th & 17th, 2016 at
+  <br />
+  <span itemprop="location" itemscope
+    itemtype="http://schema.org/Place"><span itemprop="name">OpenSource Connections</span>
+  <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"> in <span
+    itemprop="addressLocality">Charlottesville</span>, <span itemprop="addressRegion">VA</span>.
+  </span></span>
   <br/>
   <div class="count">
     <%= "#{User.attending.count} #{User.attending.count == 1 ? 'person' : 'people'} will be attending!" %>
