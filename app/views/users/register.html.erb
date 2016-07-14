@@ -7,7 +7,7 @@
   <br/>
   <%= form_for current_user, url: register_path, method: :put do |f| %>
     <%= field_set_tag do %>
-      <%= f.label :attending, 'Will you be attending the 2015 beCamp?' %>
+      <%= f.label :attending, 'Will you be attending the 2016 beCamp?' %>
       <%= f.select :attending, options_for_select([['Please choose one...', ''], ['Yes', true], ['No', false]], current_user.attending) %>
     <% end %>
 
@@ -27,7 +27,7 @@
     <% end %>
 
     <%= field_set_tag nil, { class: 'attending', style: 'display:none' }  do %>
-      <%= f.label :shirt_size, 'What is your shirt size? (10/08 - shirt order already placed. a few extras are available)' %>
+      <%= f.label :shirt_size, 'What is your shirt size?' %>
       <%= f.select :shirt_size, options_for_select(User::SHIRT_SIZES, current_user.shirt_size) %>
     <% end %>
     <%= f.submit 'Submit', class: "btn btn-primary btn-lg" %>
