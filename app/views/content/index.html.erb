@@ -11,13 +11,14 @@
   <span itemprop="location" itemscope
     itemtype="http://schema.org/Place"><span itemprop="name">OpenSource Connections</span><br/>
     <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-      <span itemprop="streetAddress">608 Preston Avenue</span><br/>
+      <span itemprop="streetAddress"><b>608 Preston Avenue, Suite 300</b></span><br/>
       <span itemprop="addressLocality">Charlottesville</span>, <span itemprop="addressRegion">VA</span>.
     </span>
   </span>
   <p><b>Parking is available at 400 Preston Avenue</b>.</p>
   <p>The lot at 608 Preston Avenue is reserved for another event.<br> Please use the lot at 400 Preston Avenue, which is provided for our use by Woodard Properties.</p>
   <p>We apologize for any inconvenience. If you require assistance, please contact the organizer.</p>
+  <p><%= link_to 'Map From 400 Preston to 608 Preston', 'https://www.google.com/maps/d/u/0/embed?mid=1EMYjU61NU6NESQcHgheRR0sao6c', target: 'blank' %></p>
   <br/>
   <div class="count">
     <%= "#{User.attending.count} #{User.attending.count == 1 ? 'person' : 'people'} will be attending!" %>
