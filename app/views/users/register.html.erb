@@ -7,7 +7,7 @@
   <br/>
   <%= form_for current_user, url: register_path, method: :put do |f| %>
     <%= field_set_tag do %>
-      <%= f.label :attending, 'Will you be attending the 2016 beCamp?' %>
+      <%= f.label :attending, "Will you be attending this year's beCamp?" %>
       <%= f.select :attending, options_for_select([['Please choose one...', ''], ['Yes', true], ['No', false]], current_user.attending) %>
     <% end %>
 
