@@ -49,7 +49,7 @@ a {
     background-color: $orange;
   }
   .bottom {
-    @include linear-gradient(to bottom, $blue, #fff);
+    background: linear-gradient(to bottom, $blue, #fff);
     height: 40px;
   }
 }
@@ -173,7 +173,7 @@ div.actions {
   width: 100%;
   #top {
     height: 60px;
-    @include linear-gradient(to top, $light-orange, #fff);
+    background: linear-gradient(to top, $light-orange, #fff);
   }
   #bottom {
     margin-top: 15px;
@@ -242,7 +242,7 @@ div.icon {
   height: 20px;
   float: left;
   margin: 25px 10px 0 10px;
-  @include linear-gradient(to bottom, $blue, #fff);
+  background: linear-gradient(to bottom, $blue, #fff);
   @include border-top-radius(10px);
   @include border-bottom-radius(10px);
   @include border-left-radius(10px);
