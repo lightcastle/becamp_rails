@@ -3,8 +3,14 @@
   if you would like to become a sponsor!
   <br/>
   <br/>
-  <%= link_to((image_tag 'lightcastle_s.png', style: 'width: 400px'), 'http://lightcastletech.com', target: 'blank') %>
-  <%= link_to((image_tag 'osc_s.png', style: 'width: 400px'), 'http://opensourceconnections.com/', target: 'blank') %>
+  <% if current_user.try(:admin?) %>
+   <%= link_to 'Admin: Edit Sponsors', sponsors_list_path %><br>
+  <% end %>
+  <% @sponsors.each do |sponsor| %>
+    <%= link_to((image_tag sponsor.logo_url, style: "width: #{sponsor.width}px"), sponsor.homepage_url, target: 'blank') %>
+  <% end %>
+  <%#= link_to((image_tag 'lightcastle_s.png', style: 'width: 400px'), 'http://lightcastletech.com', target: 'blank') %>
+  <%#= link_to((image_tag 'osc_s.png', style: 'width: 400px'), 'http://opensourceconnections.com/', target: 'blank') %>
   <%#= link_to((image_tag 'citycvillelogo_s.jpg', style: 'height: 200px'), 'http://www.charlottesville.org/', target: 'blank') %>
   <%#= link_to((image_tag 'studioix.png', style: 'width: 400px'), 'http://www.studioix.co/', target: 'blank') %>
   <%#= link_to((image_tag 'coshx_s.png', style: 'width: 400px'), 'http://www.coshx.com/', target: 'blank') %>

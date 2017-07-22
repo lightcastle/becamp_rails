@@ -11,7 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151024210730) do
+ActiveRecord::Schema.define(version: 20170722185159) do
+
+  create_table "faqs", force: :cascade do |t|
+    t.text     "question",   limit: 65535
+    t.text     "answer",     limit: 65535
+    t.integer  "sequence",   limit: 4
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  create_table "sponsors", force: :cascade do |t|
+    t.text     "homepage_url", limit: 65535
+    t.text     "logo_url",     limit: 65535
+    t.integer  "width",        limit: 4
+    t.integer  "sequence",     limit: 4
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",               limit: 255, default: "",    null: false

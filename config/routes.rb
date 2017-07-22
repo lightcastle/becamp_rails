@@ -1,12 +1,15 @@
 Becamp::Application.routes.draw do
-
+  get '/sponsors', to: 'content#sponsors'
+  get '/sponsors_list', to: 'sponsors#index', as: 'sponsors_list'
+  get '/faq_list', to: 'faqs#index', as: 'faq_list'
+  resources :sponsors
+  resources :faqs
   # devise_for :users
 
   root 'content#index'
 
   get '/faq', to: 'content#faq'
   get '/schedule', to: 'content#schedule'
-  get '/sponsors', to: 'content#sponsors'
   get '/contact', to: 'content#contact'
 
   get '/past_schedules', to: 'content#past'

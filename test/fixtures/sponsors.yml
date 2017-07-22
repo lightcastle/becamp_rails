@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  homepage_url: MyText
+  logo_url: MyText
+  width: 1
+  sequence: 1
+
+two:
+  homepage_url: MyText
+  logo_url: MyText
+  width: 1
+  sequence: 1
