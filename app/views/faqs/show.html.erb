@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @faq.question %>
+</p>
+
+<p>
+  <strong>Answer:</strong>
+  <%= raw(@faq.answer) %>
+</p>
+
+<p>
+  <strong>Sequence:</strong>
+  <%= @faq.sequence %>
+</p>
+
+<%= link_to 'Edit', edit_faq_path(@faq) %> |
+<%= link_to 'Back', faqs_path %>
